@@ -100,7 +100,7 @@ Email Service (Nodemailer)
 - Bootstrap  
 
 
-🌐 API Documentation
+## 🌐 API Documentation
 Forgot Password
 
 POST /api/auth/forgot-password
@@ -139,37 +139,45 @@ Response:
 "message": "Password reset successful"
 }
 
-⚙️ Environment Configuration
+## ⚙️ Environment Configuration
 
 Create .env file in backend folder:
 
 PORT=4000
+
 MONGO_URI=your_mongodb_connection_string
+
 EMAIL_USER=your_email@gmail.com
 
 EMAIL_PASS=your_email_app_password
+
 CLIENT_URL=http://localhost:5173
 
-🧑‍💻 Setup Instructions
-Backend
+## 🧑‍💻 Setup Instructions
+
+### Backend
 
 cd backend
+
 npm install
+
 npm run dev
 
-Frontend
+### Frontend
 
 cd frontend
+
 npm install
+
 npm run dev
 
-🌍 Application Ports
+## 🌍 Application Ports
 
 Backend API → http://localhost:4000
 
 Frontend UI → http://localhost:5173
 
-🧪 Testing
+## 🧪 Testing
 
 API testing via Postman
 
@@ -181,7 +189,7 @@ Token validation testing
 
 Password update verification
 
-🔐 Security Practices
+## 🔐 Security Practices
 
 Token stored securely in database
 
@@ -197,7 +205,7 @@ Input validation
 
 Error handling
 
-🎯 Project Goals
+## 🎯 Project Goals
 
 Implement secure authentication flow
 
@@ -211,7 +219,7 @@ Build full-stack flow
 
 Apply security best practices
 
-📄 Submission Summary
+## 📄 Submission Summary
 
 This project demonstrates:
 
@@ -229,11 +237,11 @@ Production-style architecture
 
 Real-world authentication design
 
-🎓 Interview Explanation
+## 🎓 Explanation
 
 “This system uses a secure token-based password reset mechanism. When a user requests a reset, a random token is generated and stored in the database with an expiry time. The token is sent to the user via email. When the user accesses the link, the backend validates the token and expiry, allowing the user to reset their password. The password is hashed and stored securely, and the token is deleted to prevent reuse.”
 
-📌 Project Status
+## 📌 Project Status
 
 ✔ Backend Complete
 ✔ Frontend Complete
@@ -244,11 +252,11 @@ Real-world authentication design
 ✔ API Stability
 ✔ Production-Style Architecture
 
-👩‍💻 Author
+## 👩‍💻 Author
 
 Developer: Kanesha
 Role: Full Stack Developer
 
-📜 License
+## 📜 License
 
 This project is developed for educational and learning purposes.
