@@ -244,17 +244,25 @@ Real-world authentication design
 ## 📌 Project Status
 
 ✔ Backend Complete
+
 ✔ Frontend Complete
+
 ✔ Email Integration
+
 ✔ Token Validation
+
 ✔ Password Encryption
+
 ✔ UI Integration
+
 ✔ API Stability
+
 ✔ Production-Style Architecture
 
 ## 👩‍💻 Author
 
-Developer: Kanesha
+Developer: Kanesha K
+
 Role: Full Stack Developer
 
 ## 📜 License
