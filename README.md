@@ -107,20 +107,29 @@ Email Service (Nodemailer)
 
 backend/
 │
+
 ├── controllers/
+
 │ └── auth.controller.js
+
 │
 ├── models/
+
 │ └── User.js
 │
+
 ├── routes/
+
 │ └── auth.routes.js
 │
 ├── config/
+
 │ └── db.js
 │
 ├── .env
+
 ├── package.json
+
 └── index.js
 
 
