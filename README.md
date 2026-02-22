@@ -99,67 +99,6 @@ Email Service (Nodemailer)
 - Axios  
 - Bootstrap  
 
----
-
-## 📁 Project Structure
-
-### Backend
-
-backend/
-│
-
-├── controllers/
-
-│ └── auth.controller.js
-
-│
-├── models/
-
-│ └── User.js
-│
-
-├── routes/
-
-│ └── auth.routes.js
-│
-├── config/
-
-│ └── db.js
-│
-├── .env
-
-├── package.json
-
-└── index.js
-
-
----
-
-### Frontend
-
-
-frontend/
-│
-├── src/
-│ │
-│ ├── pages/
-│ │ ├── ForgotPassword.jsx
-│ │ └── ResetPassword.jsx
-│ │
-│ ├── services/
-│ │ └── api.js
-│ │
-│ ├── components/
-│ │ └── Navbar.jsx
-│ │
-│ ├── App.jsx
-│ └── main.jsx
-│
-├── package.json
-└── vite.config.js
-
-
----
 
 ## 🌐 API Endpoints
 
@@ -203,27 +142,44 @@ Response
 }
 ⚙️ Environment Variables
 
-Create .env file in backend/ folder:
+### Create .env file in backend/ folder:
 
 PORT=4000
+
 MONGO_URI=your_mongodb_connection_string
+
 EMAIL_USER=your_email@gmail.com
+
 EMAIL_PASS=your_email_app_password
+
 CLIENT_URL=http://localhost:5173
+
 🚀 Installation & Setup
+
 Backend
+
 cd backend
+
 npm install
+
 npm run dev
+
 Frontend
+
 cd frontend
+
 npm install
+
 npm run dev
+
 🌍 Application URLs
+
 Service	URL
+
 Backend	http://localhost:4000
 
 Frontend	http://localhost:5173
+
 🧪 Testing
 
 API tested using Postman
@@ -268,7 +224,7 @@ Production-grade project structure
 
 API security practices
 
-🧾 Interview Explanation
+🧾 Explanation
 
 “This project implements a secure password reset mechanism using token-based authentication. When a user requests a password reset, the system generates a secure token stored in the database with an expiry time. A reset link containing the token is emailed to the user. When the user clicks the link, the backend validates the token, allows password reset, encrypts the new password, updates the database, and deletes the token to prevent reuse.”
 
