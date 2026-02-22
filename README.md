@@ -100,157 +100,155 @@ Email Service (Nodemailer)
 - Bootstrap  
 
 
-## 🌐 API Endpoints
-
-### Forgot Password
+🌐 API Documentation
+Forgot Password
 
 POST /api/auth/forgot-password
 
-
-**Request Body**
-```json
+Request:
 {
-  "email": "user@example.com"
+"email": "user@example.com
+"
 }
 
-Response
-
+Response:
 {
-  "message": "Reset link sent to email"
+"message": "Reset link sent to email"
 }
+
 Verify Reset Token
+
 GET /api/auth/reset-password/:token
 
-Response
-
+Response:
 {
-  "message": "Token valid"
+"message": "Token valid"
 }
+
 Reset Password
+
 POST /api/auth/reset-password/:token
 
-Request Body
-
+Request:
 {
-  "password": "newPassword123"
+"password": "newPassword123"
 }
 
-Response
-
+Response:
 {
-  "message": "Password reset successful"
+"message": "Password reset successful"
 }
-⚙️ Environment Variables
 
-### Create .env file in backend/ folder:
+⚙️ Environment Configuration
+
+Create .env file in backend folder:
 
 PORT=4000
-
 MONGO_URI=your_mongodb_connection_string
-
 EMAIL_USER=your_email@gmail.com
 
 EMAIL_PASS=your_email_app_password
-
 CLIENT_URL=http://localhost:5173
 
-🚀 Installation & Setup
-
+🧑‍💻 Setup Instructions
 Backend
 
 cd backend
-
 npm install
-
 npm run dev
 
 Frontend
 
 cd frontend
-
 npm install
-
 npm run dev
 
-🌍 Application URLs
+🌍 Application Ports
 
-Service	URL
+Backend API → http://localhost:4000
 
-Backend	http://localhost:4000
-
-Frontend	http://localhost:5173
+Frontend UI → http://localhost:5173
 
 🧪 Testing
 
-API tested using Postman
+API testing via Postman
 
-Token verification tested
+Email-based browser testing
 
-Email flow tested
+Full UI flow testing
 
-Password reset tested
+Token validation testing
 
-Error handling verified
+Password update verification
 
-🔐 Security Implementation
+🔐 Security Practices
 
-Encrypted password storage
+Token stored securely in database
 
-Secure token generation
+Expiry validation enforced
 
-Token expiry handling
+Token invalidation after reset
 
-Token database validation
+Hashed password storage
 
-Token invalidation
+Secure API communication
 
-Protected routes
+Input validation
 
-Secure API design
+Error handling
 
-🎯 Learning Outcomes
+🎯 Project Goals
 
-Real-world authentication flow
+Implement secure authentication flow
 
-Secure token architecture
+Simulate real-world password recovery
 
-Email integration
+Practice token-based security
+
+Learn email integration
+
+Build full-stack flow
+
+Apply security best practices
+
+📄 Submission Summary
+
+This project demonstrates:
+
+Secure token-based password reset
+
+Database validation mechanisms
+
+Email verification flow
 
 Full-stack integration
 
 Secure password handling
 
-Production-grade project structure
+Production-style architecture
 
-API security practices
+Real-world authentication design
 
-🧾 Explanation
+🎓 Interview Explanation
 
-“This project implements a secure password reset mechanism using token-based authentication. When a user requests a password reset, the system generates a secure token stored in the database with an expiry time. A reset link containing the token is emailed to the user. When the user clicks the link, the backend validates the token, allows password reset, encrypts the new password, updates the database, and deletes the token to prevent reuse.”
+“This system uses a secure token-based password reset mechanism. When a user requests a reset, a random token is generated and stored in the database with an expiry time. The token is sent to the user via email. When the user accesses the link, the backend validates the token and expiry, allowing the user to reset their password. The password is hashed and stored securely, and the token is deleted to prevent reuse.”
 
 📌 Project Status
 
-Backend: Completed
+✔ Backend Complete
+✔ Frontend Complete
+✔ Email Integration
+✔ Token Validation
+✔ Password Encryption
+✔ UI Integration
+✔ API Stability
+✔ Production-Style Architecture
 
-Frontend: Completed
+👩‍💻 Author
 
-Email Integration: Completed
+Developer: Kanesha
+Role: Full Stack Developer
 
-Token Validation: Completed
-
-UI Integration: Completed
-
-Security Flow: Implemented
-
-Testing: Completed
-
-👩‍💻## Author
-
-Kanesha
-Computer Science Engineer
-Full Stack Developer
-Systems Engineer at TCS
-
-📜## License
+📜 License
 
 This project is developed for educational and learning purposes.
