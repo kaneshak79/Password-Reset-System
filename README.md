@@ -1,97 +1,97 @@
-🔐 Secure Password Reset Application
+🔐 Secure Password Reset System
 
-A full-stack password recovery system built using Node.js, Express, MongoDB, React, and Email services.
-This project implements a production-grade Forgot Password & Reset Password flow with secure token handling, database validation, and email-based verification.
+A production-grade full-stack password reset system built using Node.js, Express, MongoDB, React, and Email services.
+This project demonstrates a secure, token-based password recovery flow used in real-world applications.
 
-🚀 Project Overview
+🚀 Project Description
 
-This application allows users to securely reset their passwords through a token-based email verification system.
-It follows real-world authentication practices used in modern applications, ensuring security, reliability, and scalability.
+This application allows users to securely reset their password using a token-based email verification system.
+It follows industry-standard security practices including encryption, token expiry, email validation, and database verification.
 
-✨ Key Features
-🔑 Authentication Flow
+The system is designed to simulate real-world authentication flows used in enterprise applications.
 
-Forgot password request via email
+✨ Features
+🔑 Authentication
 
-Secure reset link generation
+Forgot Password flow
 
-Token-based verification
+Reset Password flow
 
-Expiry-controlled tokens
+Secure token generation
+
+Token expiry handling
 
 One-time reset links
 
-Secure password update
-
 🔐 Security
 
-Encrypted password storage (bcrypt)
+Password hashing using bcrypt
 
-Token storage in database
+Token stored in database
 
 Token expiry validation
 
 Token invalidation after use
 
-No plaintext credentials
+No plaintext password storage
 
-Safe API handling
+📧 Email System
 
-📧 Email Integration
+Automatic reset email sending
 
-Automated reset email sending
+Secure reset link generation
 
-Secure link delivery
+Token embedded reset URL
 
-User verification through email
+Email verification flow
 
-Token embedded reset URLs
+🎨 Frontend UI
 
-🎨 User Interface
-
-Clean React UI
+React-based UI
 
 Bootstrap styling
 
-Responsive layout
+Responsive design
 
-User-friendly forms
+Clean form layout
 
-Success & error messaging
+Success & error handling
 
-Professional navigation
+Navigation bar
 
 🧠 System Flow
 
-User submits email
+User enters email on Forgot Password
 
 Server generates secure random token
 
 Token stored in database with expiry
 
-Reset link sent to email
+Reset link sent to user's email
 
 User clicks reset link
 
-Token verified by backend
+Backend verifies token
 
-Reset form displayed
+Reset password form is displayed
 
-User submits new password
+User enters new password
 
-Password securely updated
+Password is hashed and updated
 
-Token deleted from database
+Token is deleted from database
 
 🏗 Architecture
-
-Client (React + Vite)
-→ API Layer (Axios)
-→ Backend Server (Node.js + Express)
-→ Database (MongoDB)
-→ Email Service (Nodemailer)
-
-🛠 Technology Stack
+Frontend (React)
+        ↓
+Axios API Service
+        ↓
+Backend Server (Node.js + Express)
+        ↓
+MongoDB Database
+        ↓
+Email Service (Nodemailer)
+🛠 Tech Stack
 Backend
 
 Node.js
@@ -123,186 +123,176 @@ Axios
 Bootstrap
 
 📁 Project Structure
-Backend
-
+📦 Backend
 backend/
+│
 ├── controllers/
-│ └── auth.controller.js
+│   └── auth.controller.js
+│
 ├── models/
-│ └── User.js
+│   └── User.js
+│
 ├── routes/
-│ └── auth.routes.js
+│   └── auth.routes.js
+│
 ├── config/
-│ └── db.js
+│   └── db.js
+│
 ├── .env
 ├── package.json
 └── index.js
-
-Frontend
-
+📦 Frontend
 frontend/
+│
 ├── src/
-│ ├── pages/
-│ │ ├── ForgotPassword.jsx
-│ │ └── ResetPassword.jsx
-│ ├── services/
-│ │ └── api.js
-│ ├── App.jsx
-│ └── main.jsx
+│   │
+│   ├── pages/
+│   │   ├── ForgotPassword.jsx
+│   │   └── ResetPassword.jsx
+│   │
+│   ├── services/
+│   │   └── api.js
+│   │
+│   ├── components/
+│   │   └── Navbar.jsx
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
 ├── package.json
 └── vite.config.js
-
-🌐 API Documentation
-Forgot Password
-
+🌐 API Endpoints
+🔹 Forgot Password
 POST /api/auth/forgot-password
 
-Request:
+Request Body:
+
 {
-"email": "user@example.com
-"
+  "email": "user@example.com"
 }
 
 Response:
+
 {
-"message": "Reset link sent to email"
+  "message": "Reset link sent to email"
 }
-
-Verify Reset Token
-
+🔹 Verify Reset Token
 GET /api/auth/reset-password/:token
 
 Response:
+
 {
-"message": "Token valid"
+  "message": "Token valid"
 }
-
-Reset Password
-
+🔹 Reset Password
 POST /api/auth/reset-password/:token
 
-Request:
+Request Body:
+
 {
-"password": "newPassword123"
+  "password": "newPassword123"
 }
 
 Response:
+
 {
-"message": "Password reset successful"
+  "message": "Password reset successful"
 }
+⚙️ Environment Variables
 
-⚙️ Environment Configuration
-
-Create .env file in backend folder:
+Create .env file inside backend/:
 
 PORT=4000
 MONGO_URI=your_mongodb_connection_string
 EMAIL_USER=your_email@gmail.com
-
 EMAIL_PASS=your_email_app_password
 CLIENT_URL=http://localhost:5173
-
-🧑‍💻 Setup Instructions
-Backend
-
+🧑‍💻 Installation & Setup
+🔹 Backend Setup
 cd backend
 npm install
 npm run dev
-
-Frontend
-
+🔹 Frontend Setup
 cd frontend
 npm install
 npm run dev
+🌍 Application URLs
+Service	URL
+Backend API	http://localhost:4000
 
-🌍 Application Ports
-
-Backend API → http://localhost:4000
-
-Frontend UI → http://localhost:5173
-
+Frontend UI	http://localhost:5173
 🧪 Testing
 
-API testing via Postman
+API tested using Postman
 
-Email-based browser testing
+Email verification tested via browser
 
-Full UI flow testing
+Token validation tested
 
-Token validation testing
+Reset flow tested
 
-Password update verification
+Error handling verified
 
 🔐 Security Practices
 
-Token stored securely in database
-
-Expiry validation enforced
-
-Token invalidation after reset
-
 Hashed password storage
 
-Secure API communication
+Secure token generation
+
+Token expiry validation
+
+Token invalidation
+
+No token reuse
+
+Secure API endpoints
 
 Input validation
 
 Error handling
 
-🎯 Project Goals
+🎯 Learning Outcomes
 
-Implement secure authentication flow
+Real-world authentication flow
 
-Simulate real-world password recovery
+Token-based security design
 
-Practice token-based security
+Email system integration
 
-Learn email integration
-
-Build full-stack flow
-
-Apply security best practices
-
-📄 Submission Summary
-
-This project demonstrates:
-
-Secure token-based password reset
-
-Database validation mechanisms
-
-Email verification flow
+Secure password management
 
 Full-stack integration
 
-Secure password handling
-
 Production-style architecture
 
-Real-world authentication design
+API security handling
 
-🎓 Interview Explanation
+📄 Interview Explanation
 
-“This system uses a secure token-based password reset mechanism. When a user requests a reset, a random token is generated and stored in the database with an expiry time. The token is sent to the user via email. When the user accesses the link, the backend validates the token and expiry, allowing the user to reset their password. The password is hashed and stored securely, and the token is deleted to prevent reuse.”
+“This project implements a secure password reset mechanism using token-based authentication. When a user requests a password reset, a secure token is generated and stored in the database with an expiry time. The token is sent to the user via email. The backend validates the token before allowing password reset. The new password is hashed and stored securely, and the token is deleted to prevent reuse.”
 
 📌 Project Status
 
-✔ Backend Complete
-✔ Frontend Complete
-✔ Email Integration
-✔ Token Validation
-✔ Password Encryption
-✔ UI Integration
-✔ API Stability
-✔ Production-Style Architecture
+✅ Backend Completed
+✅ Frontend Completed
+✅ Email Integration
+✅ Token Validation
+✅ Password Encryption
+✅ UI Integration
+✅ API Testing
+✅ Production Architecture
 
 👩‍💻 Author
 
-Developer: Kanesha
-Role: Full Stack Developer
+Kanesha
+Full Stack Developer
+Computer Science Engineer
+TCS Systems Engineer
 
 📜 License
 
-This project is developed for educational and learning purposes.
+This project is created for educational and learning purposes.
 
-✨ A production-style secure password reset system using modern full-stack technologies.
+⭐ Secure Password Reset System
+
+A real-world authentication flow implementation using modern full-stack technologies.
