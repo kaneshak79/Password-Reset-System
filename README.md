@@ -1,6 +1,6 @@
 🔐 Password Reset System (Full Stack)
 
-A complete secure password recovery system built with Node.js, Express, MongoDB, React, and Email verification.
+A complete secure password recovery system built using Node.js, Express, MongoDB, React, and Email verification.
 This project implements a real-world Forgot Password & Reset Password flow using token-based verification, database validation, and email delivery.
 
 📌 Features
@@ -32,7 +32,7 @@ User enters email
 
 Token generated
 
-Token stored in DB
+Token stored in database
 
 Reset link sent via email
 
@@ -52,7 +52,7 @@ Token deleted
 
 Frontend (React + Vite)
 ↓
-API Calls (Axios)
+API Requests (Axios)
 ↓
 Backend (Node.js + Express)
 ↓
@@ -92,99 +92,103 @@ Axios
 Bootstrap
 
 📂 Project Structure
-Backend
-
+Backend Structure
 backend/
-│── controllers/
-│ └── auth.controller.js
-│── models/
-│ └── User.js
-│── routes/
-│ └── auth.routes.js
-│── config/
-│ └── db.js
-│── .env
-│── index.js
-
-Frontend
-
+│
+├── controllers/
+│   └── auth.controller.js
+│
+├── models/
+│   └── User.js
+│
+├── routes/
+│   └── auth.routes.js
+│
+├── config/
+│   └── db.js
+│
+├── .env
+├── package.json
+└── index.js
+Frontend Structure
 frontend/
-│── src/
-│ │── pages/
-│ │ ├── ForgotPassword.jsx
-│ │ └── ResetPassword.jsx
-│ │── services/
-│ │ └── api.js
-│ │── App.jsx
-│ │── main.jsx
-
+│
+├── src/
+│   │
+│   ├── pages/
+│   │   ├── ForgotPassword.jsx
+│   │   └── ResetPassword.jsx
+│   │
+│   ├── services/
+│   │   └── api.js
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+└── vite.config.js
 🌐 API Endpoints
 1️⃣ Forgot Password
 
 POST /api/auth/forgot-password
 
 Request Body:
+
 {
-"email": "user@example.com
-"
+  "email": "user@example.com"
 }
 
 Response:
-{
-"message": "Reset link sent to email"
-}
 
+{
+  "message": "Reset link sent to email"
+}
 2️⃣ Verify Reset Token
 
 GET /api/auth/reset-password/:token
 
 Response:
-{
-"message": "Token valid"
-}
 
+{
+  "message": "Token valid"
+}
 3️⃣ Reset Password
 
 POST /api/auth/reset-password/:token
 
 Request Body:
+
 {
-"password": "newPassword123"
+  "password": "newPassword123"
 }
 
 Response:
-{
-"message": "Password reset successful"
-}
 
+{
+  "message": "Password reset successful"
+}
 ⚙️ Environment Variables
 
-Create .env file in backend folder:
+Create .env file inside backend folder:
 
 PORT=4000
 MONGO_URI=your_mongodb_connection_string
 EMAIL_USER=your_email@gmail.com
-
 EMAIL_PASS=your_email_app_password
 CLIENT_URL=http://localhost:5173
-
 🚀 Installation & Setup
 Backend Setup
-
 cd backend
 npm install
 npm run dev
-
 Frontend Setup
-
 cd frontend
 npm install
 npm run dev
-
 🌍 Running Ports
 
-Backend API: 4000
-Frontend UI: 5173
+Backend API → 4000
+Frontend UI → 5173
 
 🧪 Testing
 
@@ -192,13 +196,13 @@ Postman API testing supported
 
 Browser email reset flow supported
 
-Full frontend UI supported
+Full frontend UI testing supported
 
 🔐 Security Design
 
-Token stored securely in DB
+Token stored securely in database
 
-Expiry time validation
+Token expiry validation
 
 One-time token usage
 
@@ -208,7 +212,7 @@ Email verification flow
 
 No plaintext password handling
 
-📸 Screenshots Section
+📸 Screenshots
 
 (Add screenshots here)
 
@@ -252,8 +256,11 @@ Error handling
 
 Security best practices
 
+🎓 Interview Explanation
 
-🏁 Status
+“When a user requests a password reset, the system generates a secure random token, stores it in the database with an expiry time, and sends it via email. When the user clicks the reset link, the backend verifies the token and expiry. If valid, the user is allowed to reset their password. The new password is securely hashed and stored in the database, and the token is deleted to prevent reuse.”
+
+🏁 Project Status
 
 Backend Complete
 Frontend Complete
@@ -262,7 +269,7 @@ Token System
 Security Flow
 UI Integration
 API Working
-Production Ready Architecture
+Production-Ready Architecture
 
 🤝 Author
 
